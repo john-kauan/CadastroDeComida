@@ -18,7 +18,7 @@ public class FoodModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private Integer quantidade;
+    private int quantidade;
     private LocalDate dataValidade;
 
 }
