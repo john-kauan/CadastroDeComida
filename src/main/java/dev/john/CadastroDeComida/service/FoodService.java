@@ -3,6 +3,7 @@ package dev.john.CadastroDeComida.service;
 
 import dev.john.CadastroDeComida.model.FoodModel;
 import dev.john.CadastroDeComida.repository.FoodRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +11,8 @@ import java.util.List;
 @Service
 public class FoodService {
 
-    private final FoodRepository foodRepository;
+    @Autowired
+    private FoodRepository foodRepository;
 
     public FoodService(FoodRepository foodRepository) {
         this.foodRepository = foodRepository;
@@ -48,5 +50,4 @@ public class FoodService {
             throw new RuntimeException("Food não encontrado com id: " + id);
         }
     }
-
 }
